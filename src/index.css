@@ -13,3 +13,9 @@
   --color-brand-900: #581c87;
   --color-brand-950: #3b0764;
 }
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

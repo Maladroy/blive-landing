@@ -9,12 +9,12 @@ export default function Vision() {
     <section id="vision" className="py-24 bg-slate-900 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-[0.05]"></div>
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Left: Vision & Video */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -22,10 +22,6 @@ export default function Vision() {
             className="space-y-10"
           >
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-purple-300 text-[12px] uppercase font-bold tracking-widest mb-6 backdrop-blur-md">
-                <Star size={16} fill="currentColor" />
-                Kế hoạch 5 năm
-              </div>
               <h2 className="text-[32px] md:text-5xl font-extrabold mb-6 leading-tight tracking-tight">TẦM NHÌN <span className="text-purple-400">2028</span></h2>
               <p className="text-lg text-slate-300 leading-relaxed font-medium">
                 Trở thành Hệ sinh thái Tiêu dùng thông minh O2O số 1 Việt Nam, kiến tạo mạng lưới <span className="text-white font-black bg-purple-600/30 px-2 py-0.5 rounded">3000 Siêu Thị Blive Mart</span> hiện đại phủ sóng mọi xã/phường trên toàn quốc.
@@ -34,12 +30,12 @@ export default function Vision() {
 
             {/* Video Thumbnail */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 aspect-video bg-black">
-              <iframe 
+              <iframe
                 className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/JfRflf1CrmQ?autoplay=1&mute=1&loop=1&playlist=JfRflf1CrmQ&controls=0&showinfo=0&rel=0" 
-                title="Blive Mart ecosystem" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                src="https://www.youtube.com/embed/JfRflf1CrmQ?autoplay=1&mute=1&loop=1&playlist=JfRflf1CrmQ&controls=0&showinfo=0&rel=0"
+                title="Blive Mart ecosystem"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
             </div>
@@ -76,8 +72,8 @@ export default function Vision() {
                   icon: <Package size={20} />
                 }
               ].map((val, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   onClick={() => setActiveValueTab(activeValueTab === idx ? -1 : idx)}
                   className={`border transition-all duration-300 cursor-pointer rounded-2xl p-5 ${activeValueTab === idx ? 'bg-purple-600/20 border-purple-500/50' : 'bg-white/5 border-white/10 hover:bg-white/10'}`}
                 >
@@ -92,7 +88,7 @@ export default function Vision() {
                       </div>
                       <AnimatePresence initial={false}>
                         {activeValueTab === idx && (
-                          <motion.div 
+                          <motion.div
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
